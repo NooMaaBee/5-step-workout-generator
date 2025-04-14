@@ -1,0 +1,64 @@
+body {
+  background: whitesmoke;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.container {
+  margin: 120px auto;
+  max-width: 600px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+form {
+  padding: 30px;
+  background-color: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  margin-bottom: 30px;
+}
+.instructions {
+  padding: 16px;
+  border: 1px solid rgba(39, 33, 66, 0.5);
+  width: 80%;
+  font-size: 16px;
+  border-radius: 10px;
+  line-height: 20px;
+  color: #596164;
+}
+.submit-button {
+  margin-left: 10px;
+  background: linear-gradient(
+    107deg,
+    rgb(255, 67, 5) 11.1%,
+    rgb(245, 135, 0) 95.3%
+  );
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 16px;
+}
+.workout {
+  background-color: whitesmoke;
+  font-size: 14px;
+  padding: 20px;
+  line-height: 24px;
+  border-left: 3px solid rgb(255, 67, 5);
+  box-shadow: 0px 4px 30px rgba(65, 50, 100, 0.08);
+}
+a {
+  color: rgb(255, 67, 5);
+}
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+}
