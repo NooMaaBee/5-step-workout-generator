@@ -1,4 +1,4 @@
-function displayWokrout(response) {
+function displayWorkout(response) {
   console.log("workout generated");
   new Typewriter("#workout", {
     strings: response.data.answer,
@@ -11,18 +11,20 @@ function displayWokrout(response) {
 function generateWorkout(event) {
   event.preventDefault();
 
-  let instrucitonsInput = document.querySelector("#user-instructions");
+  let instructionsInput = document.querySelector("#user-instructions");
 
   let apiKey = "11e1c3be102e1o7a295b1f381bf4dtf4";
   let context =
-    "You are a workout expert and enjoys to set up simple yet effective workouts. Your mission is to generated a workout containing only 5 exercises. The wokout sholud be based on the user instructions. For example: legs beginner. Provide the workout in paragrafs, each paragraf should only contain one exercise. In total 5 paragrafs, consisting on 5 exercises. Make each <strong>exercise </stron>";
-  let prompt = `User instructions: Generate a 5 step wokout with ${instructionsInput.value} in mind`;
-  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+    "You are a workout expert who loves generating customized workouts. Your mission is to generate a workout containing exactly 5 exercises. Please present your answer as bullet points in 5 distinct paragraphs, with each paragraph containing exactly one exercise. Do not include bullet points, numbers or any extra text beyond the exercises. Ensure that each paragraph starts on a new line with a clear separation between them. Make each exercise in bold writing. Write this in basic HTML";
+  let prompt = `User instructions: Generate a 5-step workout focusing on ${instructionsInput.value}. Output the workout using exactly 5 paragraphs, each containing one exercise.`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
+    prompt
+  )}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
   console.log("generating workout");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
-  axios.get(apiUrl).then(displayWokrout);
+  axios.get(apiUrl).then(displayWorkout);
 }
 
 let workoutFormElement = document.querySelector("#workout-generator-form");
