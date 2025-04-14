@@ -21,6 +21,10 @@ function generateWorkout(event) {
     prompt
   )}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
+  let workoutElement = document.querySelector("#workout");
+  workoutElement.classList.remove("hidden");
+  workoutElement.innerHTML = `<div class="generating"> ⏳ Generating a ${instructionsInput.value} workout</div>`;
+
   console.log("generating workout");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);

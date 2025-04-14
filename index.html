@@ -14,19 +14,22 @@
         <h1>5 step AI Workout Generator</h1>
       </header>
       <main>
-        <form id="workout-generator-form">
-          <input
-            type="text"
-            placeholder="Enter which part of your body you want to workout"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="workout" id="workout"></div>
+        <div class="form-container">
+          <form id="workout-generator-form">
+            <input
+              type="text"
+              placeholder="Enter which part of your body you want to workout"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: abs, legs or chest</div>
+        </div>
+        <div class="workout hidden" id="workout"></div>
 
         <br />
       </main>
